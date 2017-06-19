@@ -1,4 +1,4 @@
-package pojo;
+package com.agussuarya.latihan2.pojo;
 
 /**
  * Created by root on 19/06/17.
