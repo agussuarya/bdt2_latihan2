@@ -1,16 +1,29 @@
 package com.agussuarya.latihan2.pojo;
 
+import java.io.Serializable;
+
 /**
  * Created by root on 19/06/17.
  */
 
-public class Orang {
+public class Orang implements Serializable{
     private String nama;
     private String pekerjaan;
+    private String linkImg;
 
-    public Orang(String nama, String pekerjaan) {
+    public String getLinkImg() {
+        return linkImg;
+    }
+
+    public void setLinkImg(String linkImg) {
+        this.linkImg = linkImg;
+    }
+
+    public Orang(String nama, String pekerjaan, String linkImg) {
         this.nama = nama;
         this.pekerjaan = pekerjaan;
+        this.linkImg = linkImg;
+
     }
 
     public void setNama(String nama) {

@@ -1,5 +1,6 @@
 package com.agussuarya.latihan2.adapter;
 
+import android.app.Activity;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,10 +18,12 @@ import java.util.List;
 
 public class OrangAdapter extends RecyclerView.Adapter<OrangViewHolder>{
 
-    List<Orang> list;
+    private List<Orang> list;
+    private Activity activity;
 
-    public OrangAdapter(List<Orang> list) {
+    public OrangAdapter(List<Orang> list, Activity activity) {
         this.list = list;
+        this.activity = activity;
     }
 
     @Override
@@ -32,7 +35,7 @@ public class OrangAdapter extends RecyclerView.Adapter<OrangViewHolder>{
 
     @Override
     public void onBindViewHolder(OrangViewHolder holder, int position) {
-        holder.bind(list.get(position));
+        holder.bind(list.get(position), activity);
     }
 
     @Override
